@@ -15,6 +15,7 @@ contract SpliteNumber{
     function splitNumber() public { // number split function
         val1 = number % 1000; // We find the remainder after dividing the number by 1000.
         
+        // NOTE : Since uint is positive in fractional division operations, it does not take the end of the comma.
         uint256 number2 = number / 1000; // Subtract val1 from number and divide by 1000. this allows us to delete the last 3 digits of the main number.
         val2 = number2 % 1000; // We find the remainder again from dividing the remainder number2 by 1000.
 
